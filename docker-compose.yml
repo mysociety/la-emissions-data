@@ -1,6 +1,6 @@
 services:
   app:
-    image: mysociety/la_emissions_data:${TAG:-latest}
+    image: mysociety/la-emissions-data:${TAG:-latest}
     build:
       context: .
       dockerfile: Dockerfile.dev
