@@ -118,5 +118,5 @@ def convert_emissions():
             "uk_local_authority_emissions_data",
             "local_authority_emissions.csv",
         ),
-        index=False
+        index=False,
     )
