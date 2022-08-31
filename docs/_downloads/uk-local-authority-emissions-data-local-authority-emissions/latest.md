@@ -1,0 +1,10 @@
+---
+name: uk-local-authority-emissions-data-local-authority-emissions
+permalink: /downloads/uk-local-authority-emissions-data-local-authority-emissions/latest
+package: uk_local_authority_emissions_data
+title: local_authority_emissions
+filename: local_authority_emissions.csv
+version: latest
+full_version: latest
+file: /data/uk_local_authority_emissions_data/latest/local_authority_emissions.csv
+---

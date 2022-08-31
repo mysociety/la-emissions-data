@@ -1,5 +1,5 @@
 theme: jekyll-theme-slate
-title: la-emissions-data
+title: Local Authority Emissions Data
 description: Transformed and enhanced version of the BEIS LA emissions dataset
 
 baseurl: "/la-emissions-data"
