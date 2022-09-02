@@ -19,7 +19,7 @@ def columns_to_names_and_units() -> dict[str, tuple[str, str]]:
         "Agriculture Gas": ("Agriculture", "kt CO2"),
         "Agriculture 'Other'": ("Agriculture 'Other'", "kt CO2"),
         "Agriculture Total": ("Agriculture Total", "kt CO2"),
-        "Industry Total": ("Industry and Commercial Total", "kt CO2"),
+        "Industry Total": ("Industry Total", "kt CO2"),
         "Commercial Electricity": ("Commercial Electricity", "kt CO2"),
         "Commercial Gas ": ("Commercial Gas", "kt CO2"),
         "Commercial 'Other'": ("Commercial Other Fuels", "kt CO2"),

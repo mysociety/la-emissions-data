@@ -54,9 +54,9 @@ schema:
     constraints:
       unique: true
     example: 1541.5149386392193
-  - name: Industry and Commercial Total:kt CO2
+  - name: Industry Total:kt CO2
     type: number
-    description: Kilotons of CO2 emitted from industry and commercial total
+    description: Kilotons of CO2 emitted from Industry in total
     constraints:
       unique: true
     example: 1720.4735495727998
@@ -222,4 +222,4 @@ schema:
     constraints:
       unique: true
     example: 2.115485644861879
-hash: 2358a8302d8919721206fa1bee2abd2d
+hash: fce2eeaa988e284ef224f612503def40
