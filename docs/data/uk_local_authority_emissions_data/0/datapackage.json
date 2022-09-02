@@ -2,7 +2,7 @@
     "name": "uk_local_authority_emissions_data",
     "title": "UK local authority emissions data",
     "description": "Transformation of BEIS UK local authority subset data\n",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "keywords": [
         "Climate",
         "UK Local data",
@@ -51,7 +51,8 @@
             }
         },
         "change_log": {
-            "0.1.0": "initial commit"
+            "0.1.0": "initial commit",
+            "0.2.0": "New field(s) added to resource: official-name"
         }
     },
     "resources": [
@@ -87,6 +88,15 @@
                             "unique": false
                         },
                         "example": "ABC"
+                    },
+                    {
+                        "name": "official-name",
+                        "type": "string",
+                        "description": "Formal name of local authority",
+                        "constraints": {
+                            "unique": false
+                        },
+                        "example": "Armagh City, Banbridge and Craigavon Borough Council"
                     },
                     {
                         "name": "Industry Electricity:kt CO2",
@@ -378,7 +388,7 @@
                     }
                 ]
             },
-            "hash": "aa050d267b591e592f348d122f4da1a5"
+            "hash": "2358a8302d8919721206fa1bee2abd2d"
         }
     ]
 }
