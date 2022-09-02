@@ -90,19 +90,16 @@ def convert_emissions():
 
     df = df.loc[~df["Local Authority Code"].isna()]
 
-    df = (
-        df.la.create_code_column(from_type="gss", source_col="Local Authority Code")
-        .drop(
-            columns=[
-                "Local Authority Code",
-                "Local Authority",
-                "Second Tier Authority",
-                "Region/Country",
-            ]
-        )
-        .la.get_council_info(["official-name"])
+    df = df.la.create_code_column(
+        from_type="gss", source_col="Local Authority Code"
+    ).drop(
+        columns=[
+            "Local Authority Code",
+            "Local Authority",
+            "Second Tier Authority",
+            "Region/Country",
+        ]
     )
-    df = df[list(df.columns[-2:]) + list(df.columns[:-2])]
 
     # get modern and higher level geographies
     df = (
@@ -110,7 +107,12 @@ def convert_emissions():
         .apply(update_to_modern)
         .reset_index()
         .drop(columns=["level_1"])
+        .la.get_council_info(["official-name"])
     )
+
+    other_columns = list(df.columns[2:-1])
+    df = df[["Year", "local-authority-code", "official-name"] + other_columns]
+
     df.to_csv(
         Path(
             "data",
