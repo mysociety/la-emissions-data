@@ -24,6 +24,12 @@ schema:
     constraints:
       unique: false
     example: ABC
+  - name: official-name
+    type: string
+    description: Formal name of local authority
+    constraints:
+      unique: false
+    example: Armagh City, Banbridge and Craigavon Borough Council
   - name: Industry Electricity:kt CO2
     type: number
     description: Kilotons of CO2 emitted from industry electricity
@@ -216,4 +222,4 @@ schema:
     constraints:
       unique: true
     example: 2.115485644861879
-hash: aa050d267b591e592f348d122f4da1a5
+hash: 2358a8302d8919721206fa1bee2abd2d
