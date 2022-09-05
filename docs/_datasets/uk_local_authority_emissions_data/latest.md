@@ -16,7 +16,7 @@ contributors:
   path: https://mysociety.org
   role: author
 custom:
-  build: la_emissions_data.convert_emissions:convert_emissions
+  build: la_emissions_data.__main__:build_data
   tests:
   - test_la_emissions_data
   dataset_order: 0
@@ -40,7 +40,100 @@ custom:
   change_log:
     0.1.0: initial commit
     0.2.0: 'New field(s) added to resource: official-name'
+    0.3.0: 'Existing resource field(s) type changed: Industry Total:kt CO2'
 resources:
+- title: Local authority emissions labels
+  description: Clustered labels for local authority emissions and the source columns
+    required to generate them.
+  custom:
+    row_count: 409
+  path: la_labels.csv
+  name: la_labels
+  profile: tabular-data-resource
+  scheme: file
+  format: csv
+  hashing: md5
+  encoding: utf-8
+  schema:
+    fields:
+    - name: local-authority-code
+      type: string
+      description: 3/4 letter local authority code
+      constraints:
+        unique: true
+      example: GLA
+    - name: public_sector_by_wpop
+      type: number
+      description: Public sector emissions divided by winsorised population
+      constraints:
+        unique: true
+      example: 0.0002154976299641
+    - name: transport_by_wpop
+      type: number
+      description: Transport emissions divided by winsorised population
+      constraints:
+        unique: true
+      example: 0.0008180341485796
+    - name: pop_density
+      type: number
+      description: Population density
+      constraints:
+        unique: false
+      example: 5432.973684210527
+    - name: domestic_by_pop
+      type: number
+      description: Domestic emissions divided by population
+      constraints:
+        unique: true
+      example: 0.0011088885461464
+    - name: industry_by_gdp
+      type: number
+      description: Industry emissions divided by GDP
+      constraints:
+        unique: true
+      example: 0.003369568987807
+    - name: commerical_by_gdp
+      type: number
+      description: Commercial emissions divided by GDP
+      constraints:
+        unique: true
+      example: 0.0087597568700608
+    - name: agriculture_by_gdp
+      type: number
+      description: Agriculture emissions divided by GDP
+      constraints:
+        unique: true
+      example: 5.483895847475727e-05
+    - name: label
+      type: string
+      description: Label for local authority emissions cluster
+      constraints:
+        unique: false
+        enum:
+        - Urban Mainstream
+        - Transport/Domestic
+        - Public sector
+        - Agriculture
+        - Industry/Commerical/Domestic
+        - City of London
+      example: Urban Mainstream
+    - name: desc
+      type: string
+      description: Description of local authority emissions cluster
+      constraints:
+        unique: false
+        enum:
+        - Below average for all emissions scores
+        - Above average transport/domestic score
+        - Well above average public sector (government, education, health), below
+          average in other areas.
+        - Above average agriculture, domestic score
+        - Above average for industry/domestic/doemestic, below average public sector
+          emissions.
+        - City of London does not have a comparable emissions profile
+      example: Below average for all emissions scores
+  hash: 1b3319120ea45c8424f8be329033991d
+  download_id: uk-local-authority-emissions-data-la-labels
 - title: UK Local Authority Emissions
   description: Transformation of BEIS dataset of calculated emissions under infulence
     of local authority (updated with new and higher geographies).
@@ -97,9 +190,9 @@ resources:
       constraints:
         unique: true
       example: 1541.5149386392193
-    - name: Industry and Commercial Total:kt CO2
+    - name: Industry Total:kt CO2
       type: number
-      description: Kilotons of CO2 emitted from industry and commercial total
+      description: Kilotons of CO2 emitted from Industry in total
       constraints:
         unique: true
       example: 1720.4735495727998
@@ -265,8 +358,8 @@ resources:
       constraints:
         unique: true
       example: 2.115485644861879
-  hash: 2358a8302d8919721206fa1bee2abd2d
+  hash: fce2eeaa988e284ef224f612503def40
   download_id: uk-local-authority-emissions-data-local-authority-emissions
-full_version: 0.2.0
+full_version: 0.3.0
 permalink: /datasets/uk_local_authority_emissions_data/latest
 ---
