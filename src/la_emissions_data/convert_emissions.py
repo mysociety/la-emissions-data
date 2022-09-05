@@ -122,3 +122,7 @@ def convert_emissions():
         ),
         index=False,
     )
+
+
+if __name__ == "__main__":
+    convert_emissions()

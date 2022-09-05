@@ -1,6 +1,10 @@
 import rich_click as click
 from .convert_emissions import convert_emissions
+from .compare_emissions import generate_comparisons
 
+def build_data():
+    convert_emissions()
+    generate_comparisons()
 
 @click.group()
 def cli():
@@ -13,8 +17,7 @@ def main():
 
 @cli.command()
 def build():
-    convert_emissions()
-
+    build_data()
 
 if __name__ == "__main__":
     main()

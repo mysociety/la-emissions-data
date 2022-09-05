@@ -15,7 +15,7 @@ contributors:
   path: https://mysociety.org
   role: author
 custom:
-  build: la_emissions_data.convert_emissions:convert_emissions
+  build: la_emissions_data.__main__:build_data
   tests:
   - test_la_emissions_data
   dataset_order: 0
