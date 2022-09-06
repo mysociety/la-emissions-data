@@ -15,6 +15,10 @@ versions:
   - '0'
   - '0.4'
   - 0.4.0
+  1.0.0:
+  - '1'
+  - '1.0'
+  - 1.0.0
   - latest
 permalink: /datasets/uk_local_authority_emissions_data/versions
 ---

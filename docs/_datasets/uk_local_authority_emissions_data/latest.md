@@ -42,6 +42,7 @@ custom:
     0.2.0: 'New field(s) added to resource: official-name'
     0.3.0: 'Existing resource field(s) type changed: Industry Total:kt CO2'
     0.4.0: Sheet order changed for resource Local authority emissions labels
+    1.0.0: lock file format
 resources:
 - title: UK Local Authority Emissions
   description: Transformation of BEIS dataset of calculated emissions under infulence
@@ -363,6 +364,6 @@ resources:
   _sheet_order: 2
   hash: 1b3319120ea45c8424f8be329033991d
   download_id: uk-local-authority-emissions-data-la-labels
-full_version: 0.4.0
+full_version: 1.0.0
 permalink: /datasets/uk_local_authority_emissions_data/latest
 ---
