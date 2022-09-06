@@ -2,6 +2,7 @@ title: Local authority emissions labels
 description: Clustered labels for local authority emissions and the source columns required to generate them.
 custom:
   row_count: 409
+_sheet_order: 2
 path: la_labels.csv
 name: la_labels
 profile: tabular-data-resource
