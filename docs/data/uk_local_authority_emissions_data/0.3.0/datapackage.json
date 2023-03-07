@@ -209,7 +209,7 @@
                     {
                         "name": "local-authority-code",
                         "type": "string",
-                        "description": "Three letter code for local authorities (see https://mysociety.github.io/uk_local_authority_names_and_codes/)",
+                        "description": "Three letter code for local authorities (see https://pages.mysociety.org/uk_local_authority_names_and_codes/)",
                         "constraints": {
                             "unique": false
                         },

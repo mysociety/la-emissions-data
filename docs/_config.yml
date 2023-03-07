@@ -3,7 +3,7 @@ title: Local Authority Emissions Data
 description: Transformed and enhanced version of the BEIS LA emissions dataset
 
 baseurl: "/la-emissions-data"
-url: "https://mysociety.github.io"
+url: "https://pages.mysociety.org"
 
 collections:
   versionlists:
