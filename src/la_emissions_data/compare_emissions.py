@@ -5,6 +5,10 @@ from data_common.dataset import get_dataset_df
 from data_common.pandas.df_extensions import la, space
 from scipy.stats.mstats import winsorize
 from data_common.management.run_notebook import run_notebook
+from datetime import date
+
+# deal with councils that existed as of this date
+date_for_councils = date(2023, 4, 2)
 
 
 def get_la_emissions_data_with_population():
@@ -20,7 +24,9 @@ def get_la_emissions_data_with_population():
                 "local_authority_emissions.csv",
             )
         )
-        .la.get_council_info(["pop-2020", "area", "lower-or-unitary"])
+        .la.get_council_info(
+            ["pop-2020", "area", "lower-or-unitary"], as_of_date=date_for_councils
+        )
         .sort_values("pop-2020", ascending=False)
     )
     assert df["pop-2020"].isna().any() == False
@@ -43,14 +49,18 @@ def get_gdp_df():
         header=1,
     )
     gdp.columns = list(gdp.columns)[:-1] + ["2019"]
+
     gdp = (
         gdp[["LA code", "2019"]]  # type:ignore
         .loc[lambda df: ~df["LA code"].isna()]
-        .la.create_code_column("gss", "LA code", set_index=True, drop_source=True)
-        .rename(columns={"2019": "gdp"})
+        .la.create_code_column(
+            "gss", source_col="LA code", set_index=True, drop_source=True
+        )
         .reset_index()
+        .la.to_current(as_of_date=date_for_councils)
+        .rename(columns={"2019": "gdp"})
     )
-    higher_gdp = gdp.la.to_multiple_higher(aggfunc="sum")
+    higher_gdp = gdp.la.to_multiple_higher(aggfunc="sum", as_of_date=date_for_councils)
     gdp = pd.concat([gdp, higher_gdp])
     assert gdp["gdp"].isna().any() == False
     return gdp

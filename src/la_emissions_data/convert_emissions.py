@@ -5,6 +5,10 @@ Convert the 2020 emissions file
 import pandas as pd
 import data_common.pandas.df_extensions.la
 from pathlib import Path
+from datetime import date
+
+# calculate for councils that existed as of this date
+date_for_councils = date(2023, 4, 2)
 
 
 def columns_to_names_and_units() -> dict[str, tuple[str, str]]:
@@ -55,11 +59,15 @@ def update_to_modern(df: pd.DataFrame) -> pd.DataFrame:
     """
 
     # convert to modern lower tier/unitary councils
-    df = df.la.to_current().la.just_lower_tier()
+    df = df.la.just_lower_tier().la.to_current(as_of_date=date_for_councils)
 
     # get higher geographies from lower geographies
-    county_df = df.la.to_higher(aggfunc="sum")
-    combined_df = df.la.to_higher(aggfunc="sum", comparison_column="combined-authority")
+    county_df = df.la.to_higher(aggfunc="sum", as_of_date=date_for_councils)
+    combined_df = df.la.to_higher(
+        aggfunc="sum",
+        comparison_column="combined-authority",
+        as_of_date=date_for_councils,
+    )
 
     # need to recreate because cannot be calculated from sum
 
@@ -107,7 +115,7 @@ def convert_emissions():
         .apply(update_to_modern)
         .reset_index()
         .drop(columns=["level_1"])
-        .la.get_council_info(["official-name"])
+        .la.get_council_info(["official-name"], as_of_date=date_for_councils)
     )
 
     other_columns = list(df.columns[2:-1])
