@@ -25,7 +25,7 @@ jobs:
           submodules: 'recursive'
           
       - name: Run tests and try and build project
-        uses: mysociety/run-in-devcontainer@v1
+c
         with:
           run: |
             export PATH="/root/.local/bin:$PATH"

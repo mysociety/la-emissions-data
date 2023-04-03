@@ -5,6 +5,6 @@ package: uk_local_authority_emissions_data
 title: la_labels
 filename: la_labels.csv
 version: latest
-full_version: 1.0.0
+full_version: 1.1.0
 file: /data/uk_local_authority_emissions_data/latest/la_labels.csv
 ---

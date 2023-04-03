@@ -43,6 +43,8 @@ custom:
     0.3.0: 'Existing resource field(s) type changed: Industry Total:kt CO2'
     0.4.0: Sheet order changed for resource Local authority emissions labels
     1.0.0: lock file format
+    1.1.0-futurecouncils: ''
+    1.1.0: ''
   formats:
     csv: true
     parquet: true
@@ -51,7 +53,7 @@ resources:
   description: Transformation of BEIS dataset of calculated emissions under infulence
     of local authority (updated with new and higher geographies).
   custom:
-    row_count: 6544
+    row_count: 6288
   path: local_authority_emissions.csv
   name: local_authority_emissions
   profile: tabular-data-resource
@@ -78,13 +80,13 @@ resources:
       description: Formal name of local authority
       constraints:
         unique: false
-      example: Armagh City, Banbridge and Craigavon Borough Council
+      example: Aberdeen City Council
     - name: Industry Electricity:kt CO2
       type: number
       description: Kilotons of CO2 emitted from industry electricity
       constraints:
         unique: true
-      example: 178.9586109335806
+      example: 0.1049057616715064
     - name: Industry Gas:kt CO2
       type: number
       description: Kilotons of CO2 emitted from industry gas
@@ -102,19 +104,19 @@ resources:
       description: Kilotons of CO2 emitted from industrial other fuels
       constraints:
         unique: true
-      example: 1541.5149386392193
+      example: 0.1106923192323069
     - name: Industry Total:kt CO2
       type: number
       description: Kilotons of CO2 emitted from Industry in total
       constraints:
         unique: true
-      example: 1720.4735495727998
+      example: 0.2357270700632373
     - name: Commercial Electricity:kt CO2
       type: number
       description: Kilotons of CO2 emitted from commercial electricity
       constraints:
         unique: true
-      example: 55.7667925331539
+      example: 1.169218481411493
     - name: Commercial Gas:kt CO2
       type: number
       description: Kilotons of CO2 emitted from commercial gas
@@ -126,19 +128,19 @@ resources:
       description: Kilotons of CO2 emitted from commercial other fuels
       constraints:
         unique: true
-      example: 33.45872873440245
+      example: 0.0532120702752759
     - name: Commercial Total:kt CO2
       type: number
       description: Kilotons of CO2 emitted from commercial total
       constraints:
         unique: true
-      example: 89.22552126755635
+      example: 1.2224305516867688
     - name: Public Sector Electricity:kt CO2
       type: number
       description: Kilotons of CO2 emitted from public sector electricity
       constraints:
         unique: true
-      example: 20.85032614954082
+      example: 0.1131353608533302
     - name: Public Sector Gas:kt CO2
       type: number
       description: Kilotons of CO2 emitted from public sector gas
@@ -150,19 +152,19 @@ resources:
       description: Kilotons of CO2 emitted from public sector other fuels
       constraints:
         unique: false
-      example: 30.71833786875951
+      example: 0.0
     - name: Public Sector Total:kt CO2
       type: number
       description: Kilotons of CO2 emitted from public sector total
       constraints:
         unique: true
-      example: 51.568664018300325
+      example: 0.1309246749148766
     - name: Domestic Electricity:kt CO2
       type: number
       description: Kilotons of CO2 emitted from domestic electricity
       constraints:
         unique: true
-      example: 177.9794146689816
+      example: 1.5101117472769037
     - name: Domestic Gas:kt CO2
       type: number
       description: Kilotons of CO2 emitted from domestic gas
@@ -174,43 +176,43 @@ resources:
       description: Kilotons of CO2 emitted from domestic other fuels
       constraints:
         unique: true
-      example: 411.8723171584936
+      example: 0.1169990313730035
     - name: Domestic Total:kt CO2
       type: number
       description: Kilotons of CO2 emitted from domestic total
       constraints:
         unique: true
-      example: 589.8517318274752
+      example: 2.201895192310862
     - name: Road Transport (A roads):kt CO2
       type: number
       description: Kilotons of CO2 emitted from road transport (A roads)
       constraints:
         unique: true
-      example: 287.4816995361169
+      example: 0.2379515762608426
     - name: Road Transport (Minor roads):kt CO2
       type: number
       description: Kilotons of CO2 emitted from road transport (Minor roads)
       constraints:
         unique: true
-      example: 222.65335763722
+      example: 0.0773634669005039
     - name: Transport Other:kt CO2
       type: number
       description: Kilotons of CO2 emitted from transport other
       constraints:
         unique: true
-      example: 2.8813198260247344
+      example: 0.2674181628674267
     - name: Transport Total:kt CO2
       type: number
       description: Kilotons of CO2 emitted from transport total
       constraints:
         unique: true
-      example: 513.0163769993616
+      example: 2.109607682698959
     - name: Agriculture Electricity:kt CO2
       type: number
       description: Kilotons of CO2 emitted from agriculture electricity
       constraints:
         unique: true
-      example: 4.32121960374435
+      example: 8.416771411805918e-05
     - name: Agriculture:kt CO2
       type: number
       description: Kilotons of CO2 emitted from agriculture
@@ -222,13 +224,13 @@ resources:
       description: Kilotons of CO2 emitted from agriculture 'Other'
       constraints:
         unique: true
-      example: 71.64093069251949
+      example: 0.0026964874758935
     - name: Agriculture Total:kt CO2
       type: number
       description: Kilotons of CO2 emitted from agriculture total
       constraints:
         unique: true
-      example: 75.96215029626384
+      example: 0.0629979317161709
     - name: Waste Management Other:kt CO2
       type: number
       description: Kilotons of CO2 emitted from waste management other
@@ -246,38 +248,38 @@ resources:
       description: Kilotons of CO2 emitted from total emissions
       constraints:
         unique: true
-      example: 3040.097993981757
+      example: 6.459940952053063
     - name: Population:000s
       type: number
       description: Population in thousands
       constraints:
         unique: false
-      example: 183.933
+      example: 2.21
     - name: Per Person Emissions:t
       type: number
       description: Tonnes of CO2 emitted per person
       constraints:
         unique: true
-      example: 16.52829015990473
+      example: 1.995303662370312
     - name: Area:km2
       type: number
       description: Area in square kilometers
       constraints:
         unique: false
-      example: 1437.0685999999998
+      example: 3.1496
     - name: Emissions per km2:kt
       type: number
       description: Kilotons of CO2 emitted per square kilometer
       constraints:
         unique: true
-      example: 2.115485644861879
+      example: 0.0384502088283369
   _sheet_order: 1
-  hash: fce2eeaa988e284ef224f612503def40
+  hash: 7bf227374c8d028fb57fd10f510b298e
 - title: Local authority emissions labels
   description: Clustered labels for local authority emissions and the source columns
     required to generate them.
   custom:
-    row_count: 409
+    row_count: 393
   path: la_labels.csv
   name: la_labels
   profile: tabular-data-resource
@@ -292,79 +294,79 @@ resources:
       description: 3/4 letter local authority code
       constraints:
         unique: true
-      example: GLA
+      example: ABC
     - name: public_sector_by_wpop
       type: number
       description: Public sector emissions divided by winsorised population
       constraints:
         unique: true
-      example: 0.0002154976299641
+      example: 1.8328574716496328e-06
     - name: transport_by_wpop
       type: number
       description: Transport emissions divided by winsorised population
       constraints:
         unique: true
-      example: 0.0008180341485796
+      example: 3.466422661527722e-05
     - name: pop_density
       type: number
       description: Population density
       constraints:
         unique: false
-      example: 5432.973684210527
+      example: 69.83638211382114
     - name: domestic_by_pop
       type: number
       description: Domestic emissions divided by population
       constraints:
         unique: true
-      example: 0.0011088885461464
+      example: 0.000642253372968
     - name: industry_by_gdp
       type: number
       description: Industry emissions divided by GDP
       constraints:
         unique: true
-      example: 0.003369568987807
+      example: 0.000636571579532
     - name: commerical_by_gdp
       type: number
       description: Commercial emissions divided by GDP
       constraints:
         unique: true
-      example: 0.0087597568700608
+      example: 0.0031283648139399
     - name: agriculture_by_gdp
       type: number
       description: Agriculture emissions divided by GDP
       constraints:
         unique: true
-      example: 5.483895847475727e-05
+      example: 3.068878201294373e-06
     - name: label
       type: string
       description: Label for local authority emissions cluster
       constraints:
         unique: false
         enum:
+        - Public sector
         - Urban Mainstream
         - Transport/Domestic
-        - Public sector
         - Agriculture
         - Industry/Commerical/Domestic
         - City of London
-      example: Urban Mainstream
+      example: Agriculture
     - name: desc
       type: string
       description: Description of local authority emissions cluster
       constraints:
         unique: false
         enum:
-        - Below average for all emissions scores
-        - Above average transport/domestic score
         - Well above average public sector (government, education, health), below
           average in other areas.
+        - Below average for all emissions scores
+        - Above average transport/domestic score
         - Above average agriculture, domestic score
         - Above average for industry/domestic/doemestic, below average public sector
           emissions.
         - City of London does not have a comparable emissions profile
-      example: Below average for all emissions scores
+      example: Above average agriculture, domestic score
   _sheet_order: 2
-  hash: 1b3319120ea45c8424f8be329033991d
-full_version: 1.0.0
+  hash: b70ddc37a6bb37c13e5ab885f75963a2
+full_version: 1.1.0
 permalink: /datasets/uk_local_authority_emissions_data/latest
 ---
