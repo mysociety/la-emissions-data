@@ -20,6 +20,7 @@ STS,Transport/Domestic,Above average transport/domestic score
 WSX,Urban Mainstream,Below average for all emissions scores
 NTCA,Transport/Domestic,Above average transport/domestic score
 NTT,Transport/Domestic,Above average transport/domestic score
+YNYC,Transport/Domestic,Above average transport/domestic score
 DEV,Transport/Domestic,Above average transport/domestic score
 DBY,Transport/Domestic,Above average transport/domestic score
 LDS,Urban Mainstream,Below average for all emissions scores
@@ -361,7 +362,7 @@ FOE,Transport/Domestic,Above average transport/domestic score
 RED,Urban Mainstream,Below average for all emissions scores
 AGB,Transport/Domestic,Above average transport/domestic score
 GOS,Urban Mainstream,Below average for all emissions scores
-MDE,Transport/Domestic,Above average transport/domestic score
+MDE,Agriculture,"Above average agriculture, domestic score"
 BOS,Urban Mainstream,Below average for all emissions scores
 FYL,Transport/Domestic,Above average transport/domestic score
 HYN,Urban Mainstream,Below average for all emissions scores
@@ -373,7 +374,7 @@ TAW,Urban Mainstream,Below average for all emissions scores
 CGN,Agriculture,"Above average agriculture, domestic score"
 DEB,Agriculture,"Above average agriculture, domestic score"
 ROS,Transport/Domestic,Above average transport/domestic score
-BOT,Transport/Domestic,Above average transport/domestic score
+BOT,Urban Mainstream,Below average for all emissions scores
 AGY,Agriculture,"Above average agriculture, domestic score"
 BGW,Urban Mainstream,Below average for all emissions scores
 TOR,Agriculture,"Above average agriculture, domestic score"

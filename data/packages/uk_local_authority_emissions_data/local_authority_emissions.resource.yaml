@@ -2,7 +2,7 @@ title: UK Local Authority Emissions
 description: Transformation of BEIS dataset of calculated emissions under infulence
   of local authority (updated with new and higher geographies).
 custom:
-  row_count: 6288
+  row_count: 6304
 path: local_authority_emissions.csv
 name: local_authority_emissions
 profile: tabular-data-resource
@@ -223,4 +223,4 @@ schema:
       unique: true
     example: 0.0384502088283369
 _sheet_order: 1
-hash: 7bf227374c8d028fb57fd10f510b298e
+hash: 5dfae182b267c384f0b18ef7521a0cd1

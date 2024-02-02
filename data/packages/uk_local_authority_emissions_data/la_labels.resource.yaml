@@ -2,7 +2,7 @@ title: Local authority emissions labels
 description: Clustered labels for local authority emissions and the source columns
   required to generate them.
 custom:
-  row_count: 393
+  row_count: 394
 path: la_labels.csv
 name: la_labels
 profile: tabular-data-resource
@@ -66,12 +66,12 @@ schema:
     constraints:
       unique: false
       enum:
-      - Public sector
-      - Urban Mainstream
-      - Transport/Domestic
       - Agriculture
-      - Industry/Commerical/Domestic
       - City of London
+      - Industry/Commerical/Domestic
+      - Public sector
+      - Transport/Domestic
+      - Urban Mainstream
     example: Agriculture
   - name: desc
     type: string
@@ -79,14 +79,14 @@ schema:
     constraints:
       unique: false
       enum:
-      - Well above average public sector (government, education, health), below average
-        in other areas.
-      - Below average for all emissions scores
-      - Above average transport/domestic score
       - Above average agriculture, domestic score
       - Above average for industry/domestic/doemestic, below average public sector
         emissions.
+      - Above average transport/domestic score
+      - Below average for all emissions scores
       - City of London does not have a comparable emissions profile
+      - Well above average public sector (government, education, health), below average
+        in other areas.
     example: Above average agriculture, domestic score
 _sheet_order: 2
-hash: b70ddc37a6bb37c13e5ab885f75963a2
+hash: d762bbff9da84f1648326d2b50308094

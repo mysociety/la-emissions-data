@@ -20,4 +20,4 @@ def df() -> pd.DataFrame:
 
 def test_number_of_authorities(df: pd.DataFrame):
     # 409 current authorities as of 01/04/2023
-    assert df["local-authority-code"].nunique() == 393
+    assert df["local-authority-code"].nunique() == 394
