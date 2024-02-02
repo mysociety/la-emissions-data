@@ -1,0 +1,92 @@
+title: Local authority emissions labels
+description: Clustered labels for local authority emissions and the source columns
+  required to generate them.
+custom:
+  row_count: 394
+path: la_labels.csv
+name: la_labels
+profile: tabular-data-resource
+scheme: file
+format: csv
+hashing: md5
+encoding: utf-8
+schema:
+  fields:
+  - name: local-authority-code
+    type: string
+    description: 3/4 letter local authority code
+    constraints:
+      unique: true
+    example: ABC
+  - name: public_sector_by_wpop
+    type: number
+    description: Public sector emissions divided by winsorised population
+    constraints:
+      unique: true
+    example: 1.8328574716496328e-06
+  - name: transport_by_wpop
+    type: number
+    description: Transport emissions divided by winsorised population
+    constraints:
+      unique: true
+    example: 3.466422661527722e-05
+  - name: pop_density
+    type: number
+    description: Population density
+    constraints:
+      unique: false
+    example: 69.83638211382114
+  - name: domestic_by_pop
+    type: number
+    description: Domestic emissions divided by population
+    constraints:
+      unique: true
+    example: 0.000642253372968
+  - name: industry_by_gdp
+    type: number
+    description: Industry emissions divided by GDP
+    constraints:
+      unique: true
+    example: 0.000636571579532
+  - name: commerical_by_gdp
+    type: number
+    description: Commercial emissions divided by GDP
+    constraints:
+      unique: true
+    example: 0.0031283648139399
+  - name: agriculture_by_gdp
+    type: number
+    description: Agriculture emissions divided by GDP
+    constraints:
+      unique: true
+    example: 3.068878201294373e-06
+  - name: label
+    type: string
+    description: Label for local authority emissions cluster
+    constraints:
+      unique: false
+      enum:
+      - Agriculture
+      - City of London
+      - Industry/Commerical/Domestic
+      - Public sector
+      - Transport/Domestic
+      - Urban Mainstream
+    example: Agriculture
+  - name: desc
+    type: string
+    description: Description of local authority emissions cluster
+    constraints:
+      unique: false
+      enum:
+      - Above average agriculture, domestic score
+      - Above average for industry/domestic/doemestic, below average public sector
+        emissions.
+      - Above average transport/domestic score
+      - Below average for all emissions scores
+      - City of London does not have a comparable emissions profile
+      - Well above average public sector (government, education, health), below average
+        in other areas.
+    example: Above average agriculture, domestic score
+_sheet_order: 2
+hash: d762bbff9da84f1648326d2b50308094

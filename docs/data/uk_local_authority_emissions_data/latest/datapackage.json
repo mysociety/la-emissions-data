@@ -2,7 +2,7 @@
     "name": "uk_local_authority_emissions_data",
     "title": "UK local authority emissions data",
     "description": "Transformation of BEIS UK local authority subset data\n",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "keywords": [
         "Climate",
         "UK Local data",
@@ -57,7 +57,12 @@
             "0.4.0": "Sheet order changed for resource Local authority emissions labels",
             "1.0.0": "lock file format",
             "1.1.0-futurecouncils": "",
-            "1.1.0": ""
+            "1.1.0": "",
+            "1.2.0": "Change in data for resource(s): local_authority_emissions,la_labels"
+        },
+        "datasette": {
+            "about": "Info & Downloads",
+            "about_url": "https://pages.mysociety.org/la_emissions_data/datasets/uk_local_authority_emissions_data/1_2_0"
         }
     },
     "resources": [
@@ -65,7 +70,11 @@
             "title": "UK Local Authority Emissions",
             "description": "Transformation of BEIS dataset of calculated emissions under infulence of local authority (updated with new and higher geographies).",
             "custom": {
-                "row_count": 6288
+                "row_count": 6304,
+                "datasette": {
+                    "about": "Info & Downloads",
+                    "about_url": "https://pages.mysociety.org/la_emissions_data/datasets/uk_local_authority_emissions_data/1_2_0#local_authority_emissions"
+                }
             },
             "path": "local_authority_emissions.csv",
             "name": "local_authority_emissions",
@@ -394,13 +403,17 @@
                 ]
             },
             "_sheet_order": 1,
-            "hash": "7bf227374c8d028fb57fd10f510b298e"
+            "hash": "5dfae182b267c384f0b18ef7521a0cd1"
         },
         {
             "title": "Local authority emissions labels",
             "description": "Clustered labels for local authority emissions and the source columns required to generate them.",
             "custom": {
-                "row_count": 393
+                "row_count": 394,
+                "datasette": {
+                    "about": "Info & Downloads",
+                    "about_url": "https://pages.mysociety.org/la_emissions_data/datasets/uk_local_authority_emissions_data/1_2_0#la_labels"
+                }
             },
             "path": "la_labels.csv",
             "name": "la_labels",
@@ -490,12 +503,12 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "Public sector",
-                                "Urban Mainstream",
-                                "Transport/Domestic",
                                 "Agriculture",
+                                "City of London",
                                 "Industry/Commerical/Domestic",
-                                "City of London"
+                                "Public sector",
+                                "Transport/Domestic",
+                                "Urban Mainstream"
                             ]
                         },
                         "example": "Agriculture"
@@ -507,12 +520,12 @@
                         "constraints": {
                             "unique": false,
                             "enum": [
-                                "Well above average public sector (government, education, health), below average in other areas.",
-                                "Below average for all emissions scores",
-                                "Above average transport/domestic score",
                                 "Above average agriculture, domestic score",
                                 "Above average for industry/domestic/doemestic, below average public sector emissions.",
-                                "City of London does not have a comparable emissions profile"
+                                "Above average transport/domestic score",
+                                "Below average for all emissions scores",
+                                "City of London does not have a comparable emissions profile",
+                                "Well above average public sector (government, education, health), below average in other areas."
                             ]
                         },
                         "example": "Above average agriculture, domestic score"
@@ -520,7 +533,7 @@
                 ]
             },
             "_sheet_order": 2,
-            "hash": "b70ddc37a6bb37c13e5ab885f75963a2"
+            "hash": "d762bbff9da84f1648326d2b50308094"
         }
     ]
 }

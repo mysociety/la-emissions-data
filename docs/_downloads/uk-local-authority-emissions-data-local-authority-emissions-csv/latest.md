@@ -5,6 +5,6 @@ package: uk_local_authority_emissions_data
 title: local_authority_emissions
 filename: local_authority_emissions.csv
 version: latest
-full_version: 1.1.0
+full_version: 1.2.0
 file: /data/uk_local_authority_emissions_data/latest/local_authority_emissions.csv
 ---

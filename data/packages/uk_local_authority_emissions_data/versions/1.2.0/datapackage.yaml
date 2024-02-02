@@ -1,0 +1,47 @@
+name: uk_local_authority_emissions_data
+title: UK local authority emissions data
+description: "Transformation of BEIS UK local authority subset data\n"
+version: 1.2.0
+keywords:
+- Climate
+- UK Local data
+- UK
+licenses:
+- name: CC-BY-4.0
+  path: https://creativecommons.org/licenses/by/4.0/
+  title: Creative Commons Attribution 4.0 International License
+contributors:
+- title: mySociety
+  path: https://mysociety.org
+  role: author
+custom:
+  build: la_emissions_data.__main__:build_data
+  tests:
+  - test_la_emissions_data
+  dataset_order: 0
+  download_options:
+    gate: default
+    survey: default
+    header_text: default
+  composite:
+    xlsx:
+      include: all
+      exclude: none
+      render: true
+    sqlite:
+      include: all
+      exclude: none
+      render: true
+    json:
+      include: all
+      exclude: none
+      render: true
+  change_log:
+    0.1.0: initial commit
+    0.2.0: 'New field(s) added to resource: official-name'
+    0.3.0: 'Existing resource field(s) type changed: Industry Total:kt CO2'
+    0.4.0: Sheet order changed for resource Local authority emissions labels
+    1.0.0: lock file format
+    1.1.0-futurecouncils: ''
+    1.1.0: ''
+    1.2.0: 'Change in data for resource(s): local_authority_emissions,la_labels'

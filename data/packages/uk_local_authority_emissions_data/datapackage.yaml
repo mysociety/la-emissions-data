@@ -1,7 +1,7 @@
 name: uk_local_authority_emissions_data
 title: UK local authority emissions data
 description: "Transformation of BEIS UK local authority subset data\n"
-version: 1.1.0
+version: 1.2.0
 keywords:
 - Climate
 - UK Local data
@@ -44,3 +44,4 @@ custom:
     1.0.0: lock file format
     1.1.0-futurecouncils: ''
     1.1.0: ''
+    1.2.0: 'Change in data for resource(s): local_authority_emissions,la_labels'

@@ -19,11 +19,14 @@ versions:
   - '1.0'
   - 1.0.0
   1.1.0:
-  - '1'
   - '1.1'
   - 1.1.0
-  - latest
   1.1.0-futurecouncils:
   - 1.1.0-futurecouncils
+  1.2.0:
+  - '1'
+  - '1.2'
+  - 1.2.0
+  - latest
 permalink: /datasets/uk_local_authority_emissions_data/versions
 ---
