@@ -8,7 +8,7 @@ from data_common.management.run_notebook import run_notebook
 from datetime import date
 
 # deal with councils that existed as of this date
-date_for_councils = date(2023, 4, 2)
+date_for_councils = date(2024, 2, 2)
 
 
 def get_la_emissions_data_with_population():

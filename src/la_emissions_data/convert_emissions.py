@@ -8,7 +8,7 @@ from pathlib import Path
 from datetime import date
 
 # calculate for councils that existed as of this date
-date_for_councils = date(2023, 4, 2)
+date_for_councils = date(2024, 2, 2)
 
 
 def columns_to_names_and_units() -> dict[str, tuple[str, str]]:
